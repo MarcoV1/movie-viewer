@@ -1,0 +1,21 @@
+
+.main-title {
+  border-bottom: 2px solid;
+  padding: 1rem;
+  margin: auto 0px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+  overflow: hidden;
+
+  .movie-details {
+    padding: 20px; // Adjust spacing as needed
+    border-left: 1px solid #ccc; // Add a border between columns
+    overflow-y: auto; // Add a vertical scrollbar if needed
+  }
+
+}
+

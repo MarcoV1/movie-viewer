@@ -1,0 +1,5 @@
+<div class="movie-list">
+  <div *ngFor="let movie of movieList" class="movie-card" [ngClass]="{ 'movie-clicked': clickedMovieId === movie?.id }" (click)="onMovieClick(movie)">
+    <a class="movie-title">{{ movie?.original_title }}</a>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+/* Set the background color of the entire page */
+body {
+  background-color: #f3f3f3;
+  font-family: Arial, sans-serif;
+}
+
+/* Change the text color of headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+}
+
+/* Style links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Customize buttons */
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}

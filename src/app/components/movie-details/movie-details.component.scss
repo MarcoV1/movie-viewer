@@ -1,0 +1,31 @@
+.movie-details-card {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.movie-details-image {
+  flex: 1;
+  max-width: 200px;
+  padding: 10px;
+}
+
+.movie-details-image img {
+  width: 100%;
+  height: auto;
+}
+
+.movie-details-content {
+  flex: 2;
+  padding: 10px;
+}
+
+.movie-details-content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.movie-details-content p {
+  font-size: 16px;
+}

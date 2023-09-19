@@ -1,0 +1,10 @@
+<h1 class="main-title">Movie viewer</h1>
+
+<main class="main-container">
+
+  <movie-list [movieList]="(movieList$ | async)!"
+    (clickedMovie)="selectedMovie = $event"></movie-list>
+
+  <movie-details class="movie-details" [selectedMovie]="selectedMovie"></movie-details>
+
+</main>
