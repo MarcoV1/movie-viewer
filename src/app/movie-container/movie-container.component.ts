@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {MovieService} from "../services/movie.service";
-import {take} from "rxjs";
 import {getListOfMovies} from "../state/movie.actions";
 import {Store} from "@ngrx/store";
 import {selectCurrentPage, selectMoviesList, selectTotalPages} from "../state/movie.selectors";
@@ -18,10 +16,7 @@ export class MovieContainerComponent implements OnInit {
 
   selectedMovie: Movie;
 
-  constructor(movieService: MovieService, private store: Store) {
-
-    movieService.getAllMovies(1).pipe(take(1)).subscribe(value => console.log("val", value))
-  }
+  constructor(private store: Store) {}
 
   ngOnInit() {
     this.store.dispatch(getListOfMovies({ currentPage: 1 }));

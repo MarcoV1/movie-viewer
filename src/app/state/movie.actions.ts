@@ -11,7 +11,7 @@ export const getListOfMoviesSuccess = createAction(
 );
 
 export const getListOfMoviesFailed = createAction(
-  "[Wine List] Get Movies Failed",
+  "[Movie List] Get Movies Failed",
   props<{ error: any }>()
 );
 

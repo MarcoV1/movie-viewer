@@ -10,11 +10,11 @@ import {Store} from "@ngrx/store";
 })
 export class MovieListComponent {
 
-  @Input() movieList: Movie[];
+  @Input() movieList: Movie[] = [];
   @Input() currentPage: number;
   @Input() totalPages: number;
 
-  @Output() clickedMovie = new EventEmitter<Movie>();
+  @Output() clickedMovie: EventEmitter<Movie> = new EventEmitter<Movie>();
 
   clickedMovieId: number;
 
@@ -22,7 +22,7 @@ export class MovieListComponent {
 
   onMovieClick(movie: any) {
     this.clickedMovieId = movie?.id;
-    this.clickedMovie.next(movie);
+    this.clickedMovie.emit(movie);
   }
 
   previousPage() {
