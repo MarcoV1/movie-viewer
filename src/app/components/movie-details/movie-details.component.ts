@@ -8,14 +8,7 @@ import {environment} from "../../../environments/environment";
   styleUrls: ['./movie-details.component.scss']
 })
 export class MovieDetailsComponent {
-
-  @Input()
-  selectedMovie: Movie;
+  @Input() selectedMovie: Movie;
 
   imagePath = environment.imagePath;
-
-  showMovieDetails(movie: any) {
-    this.selectedMovie = movie;
-  }
-
 }

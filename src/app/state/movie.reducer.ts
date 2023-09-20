@@ -4,9 +4,11 @@ import * as MovieActions from "./movie.actions";
 
 export const moviesReducer = createReducer(
   initialState,
-  on(MovieActions.getListOfMoviesSuccess, (state, { movieList }) => ({
+  on(MovieActions.getListOfMoviesSuccess, (state, { movieResults }) => ({
     ...state,
-    movieList: movieList,
+    movieList: movieResults?.results,
+    page: movieResults?.page,
+    totalPages: movieResults?.total_pages
   })),
 );
 

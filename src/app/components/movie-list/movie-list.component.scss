@@ -5,7 +5,7 @@
 
 .movie-card {
   border: 1px solid #ddd;
-  padding: 0.7rem;
+  padding: 0.66rem;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
   position: relative;
@@ -37,4 +37,36 @@
   text-decoration: none;
   color: #333;
   font-weight: bold;
+}
+
+.pagination {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.pagination button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 16px;
+  margin: 0 10px;
+  color: #333;
+  display: inline-block;
+  vertical-align: middle;
 }

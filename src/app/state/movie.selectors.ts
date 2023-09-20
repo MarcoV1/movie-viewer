@@ -8,8 +8,13 @@ export const selectMoviesList = createSelector(
   (state: MovieState) => state?.movieList || []
 );
 
-export const selectMovieById = (movieId: number) => createSelector(
+export const selectCurrentPage = createSelector(
   selectMovies,
-  (state: MovieState) =>
-    state?.movieList.find(movie => movie.id == movieId)
+  (state: MovieState) => state?.page
 );
+
+export const selectTotalPages = createSelector(
+  selectMovies,
+  (state: MovieState) => state?.totalPages
+);
+

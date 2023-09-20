@@ -10,10 +10,10 @@ export class MovieEffects {
   loadMovies$ = createEffect(() =>
     this.actions$.pipe(
       ofType(MovieActions.getListOfMovies.type, MovieActions.getListOfMovies),
-      switchMap(() =>
-        this.movieService.getAllMovies().pipe(
-          map((movieList) =>
-            MovieActions.getListOfMoviesSuccess({ movieList: movieList?.results })
+      switchMap((action) =>
+        this.movieService.getAllMovies(action.currentPage).pipe(
+          map((movieResults) =>
+            MovieActions.getListOfMoviesSuccess({ movieResults: movieResults,  })
           ),
           catchError((error) =>
             of(MovieActions.getListOfMoviesFailed({ error: error }))

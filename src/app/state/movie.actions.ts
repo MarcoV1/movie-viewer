@@ -1,12 +1,13 @@
 import {createAction, props} from "@ngrx/store";
-import {Movie} from "../types/movie.interface";
+import {MovieResults} from "../types/movie-results.interface";
 
 export const getListOfMovies = createAction(
-  "[Movie List] Get Movies");
+  "[Movie List] Get Movies",
+  props<{ currentPage: number }>());
 
 export const getListOfMoviesSuccess = createAction(
   "[Movie List] Get Movies Success",
-  props<{ movieList: Movie[] }>()
+  props<{ movieResults: MovieResults }>()
 );
 
 export const getListOfMoviesFailed = createAction(
